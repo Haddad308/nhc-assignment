@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import SearchBar from "@/components/search-bar";
 import ProductCard from "@/components/product-card";
 import EmptyState from "@/components/empty-state";
@@ -29,8 +27,6 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <div className="flex-grow container mx-auto ">
         <div className="main-container">
-          <Header />
-
           <div className="py-8 px-4">
             <SearchBar
               onSearch={handleSearch}
@@ -61,8 +57,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

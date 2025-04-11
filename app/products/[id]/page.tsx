@@ -1,7 +1,5 @@
 import Image from "next/image";
 import { getProduct } from "@/lib/api";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 
 interface ProductPageProps {
   params: { id: string };
@@ -12,14 +10,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="p-4">
-        <h1 className="text-xl text-gray-500 mb-4">Product details</h1>
-      </div>
-
       <div className="flex-grow container mx-auto px-4 pb-12">
         <div className="main-container p-4">
-          <Header />
-
           <div className="py-8 px-4">
             <h1 className="text-2xl text-blue-600 text-center mb-8">
               {product.title}
@@ -98,8 +90,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

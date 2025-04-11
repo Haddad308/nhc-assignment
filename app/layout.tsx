@@ -1,9 +1,14 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Abel } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const abel = Abel({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Products Search",
@@ -17,8 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning className={inter.className}>
+      <body suppressHydrationWarning className={abel.className}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

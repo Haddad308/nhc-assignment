@@ -67,7 +67,9 @@ export default function SearchBar({ onSearch, onSearchStart }: SearchBarProps) {
 
   return (
     <div className="w-full max-w-xl mx-auto">
-      <h2 className="text-center text-lg mb-4">Search products by keyword</h2>
+      <h2 className="font-sans text-lg mb-4 text-[#285F9D]">
+        Search products by keyword
+      </h2>
       <form onSubmit={handleSubmit} className="relative">
         <input
           type="text"
