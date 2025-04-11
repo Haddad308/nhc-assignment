@@ -9,13 +9,11 @@ import type { Product } from "@/lib/types";
 export default function Home() {
   const [searchResults, setSearchResults] = useState<Product[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
-  const [, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSearch = (results: Product[], query: string) => {
+  const handleSearch = (results: Product[], empty: boolean) => {
     setSearchResults(results);
-    setSearchQuery(query);
-    setHasSearched(true);
+    setHasSearched(empty);
     setIsLoading(false);
   };
 

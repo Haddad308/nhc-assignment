@@ -23,7 +23,7 @@ function useDebounce<T>(value: T, delay: number): T {
 }
 
 interface SearchBarProps {
-  onSearch: (results: Product[], query: string) => void;
+  onSearch: (results: Product[], empty: boolean) => void;
   onSearchStart: () => void;
 }
 
@@ -44,6 +44,8 @@ export default function SearchBar({ onSearch, onSearchStart }: SearchBarProps) {
   useEffect(() => {
     if (debouncedSearchTerm.trim()) {
       performSearch(debouncedSearchTerm.trim());
+    } else {
+      onSearch([], false);
     }
   }, [debouncedSearchTerm]);
 
@@ -56,10 +58,10 @@ export default function SearchBar({ onSearch, onSearchStart }: SearchBarProps) {
         `https://dummyjson.com/products/search?q=${encodeURIComponent(query)}`
       );
       const data = await response.json();
-      onSearch(data.products, query);
+      onSearch(data.products, true);
     } catch (error) {
       console.error("Error searching products:", error);
-      onSearch([], query);
+      onSearch([], true);
     } finally {
       setIsSearching(false);
     }
