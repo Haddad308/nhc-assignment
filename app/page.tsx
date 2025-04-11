@@ -24,38 +24,29 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <div className="flex-grow container mx-auto ">
-        <div className="main-container">
-          <div className="py-8 px-4">
-            <SearchBar
-              onSearch={handleSearch}
-              onSearchStart={handleSearchStart}
-            />
+    <div className="min-h-[80vh] flex flex-col container mx-auto px-24 py-5">
+      <div className="flex-grow flex flex-col justify-center items-center container mx-auto ">
+        <SearchBar onSearch={handleSearch} onSearchStart={handleSearchStart} />
 
-            {hasSearched && (
-              <div className="mt-8">
-                <p className="mb-6">
-                  Total results count: {searchResults.length}
-                </p>
+        {hasSearched && (
+          <div className="mt-8">
+            <p className="mb-6">Total results count: {searchResults.length}</p>
 
-                {isLoading ? (
-                  <div className="flex justify-center items-center py-12">
-                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600"></div>
-                  </div>
-                ) : searchResults.length > 0 ? (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {searchResults.map((product) => (
-                      <ProductCard key={product.id} product={product} />
-                    ))}
-                  </div>
-                ) : (
-                  <EmptyState />
-                )}
+            {isLoading ? (
+              <div className="flex justify-center items-center py-12">
+                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600"></div>
               </div>
+            ) : searchResults.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {searchResults.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            ) : (
+              <EmptyState />
             )}
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

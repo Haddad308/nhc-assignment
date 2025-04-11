@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function EmptyState() {
   return (
-    <div className="flex flex-col items-center justify-center py-12">
+    <div className="flex flex-col items-center justify-center py-12 ">
       <div className="relative w-32 h-32 mb-4">
         <Image
-          src="/empty-state.png"
+          src="/Frame.svg"
           alt="No results"
           fill
           style={{ objectFit: "contain" }}
