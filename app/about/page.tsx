@@ -17,7 +17,7 @@ export default function AboutPage() {
 
             <div className="space-y-8">
               <div>
-                <h2 className="text-blue-600 font-medium mb-2">
+                <h2 className="text-[#285F9D] font-medium mb-2">
                   About NHC National Housing Company
                 </h2>
                 <p className="text-gray-700">
@@ -40,7 +40,7 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <h2 className="text-blue-600 font-medium mb-2">
+                <h2 className="text-[#285F9D] font-medium mb-2">
                   National Housing Strategy
                 </h2>
                 <p className="text-gray-700">

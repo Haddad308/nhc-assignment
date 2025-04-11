@@ -8,7 +8,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+    <div className="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02] p-4">
       <div className="relative h-56 bg-black">
         <Image
           src={product.thumbnail || "/placeholder.svg"}
@@ -23,7 +23,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <h3 className="text-[#285F9D] font-medium text-2xl mb-2">
           {product.title}
         </h3>
-        <p className="text-gray-500 mb-4">{product.description}</p>
+        <p className="text-gray-500 mb-4 line-clamp-3">{product.description}</p>
         <div className="flex justify-between items-center">
           <div className="text-base font-medium">
             Price : <span className="text-[#285F9D]">${product.price}</span>
