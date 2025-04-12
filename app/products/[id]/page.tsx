@@ -4,11 +4,11 @@ import { Suspense } from "react";
 import { ProductSkeleton } from "@/components/home/ProductSkeleton";
 import { Star } from "lucide-react";
 
-interface ProductPageProps {
+export default async function ProductPage({
+  params,
+}: {
   params: { id: string };
-}
-
-export default async function ProductPage({ params }: ProductPageProps) {
+}) {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="flex-grow container mx-auto px-4 pb-12">
