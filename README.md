@@ -1,5 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛍️ Product Details Page – Assignment Five
 
+This repository contains a simple product details page built with modern web technologies. The focus of this assignment is to display detailed information about a specific product using a dynamic route.
+
+## 🚀 Live Demo
+
+👉 **Check it out here:**  
+🔗 [https://nhc-assignment-five.vercel.app/products/78](https://nhc-assignment-five.vercel.app/products/78)
+
+## 📦 Features
+
+- Dynamic product routing
+- Clean and responsive UI
+- Fetch product data from API
+- Deployed on Vercel for fast access
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js  
+- **Language:** TypeScript  
+- **Styling:** Tailwind CSS  
+- **Deployment:** Vercel
 ## Getting Started
 
 First, run the development server:
