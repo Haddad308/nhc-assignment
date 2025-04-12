@@ -1,26 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import type React from "react";
 import { useState, useEffect } from "react";
 import { Search } from "lucide-react";
 import { Product } from "@/lib/types";
-
-// Custom debounce hook
-function useDebounce<T>(value: T, delay: number): T {
-  const [debouncedValue, setDebouncedValue] = useState<T>(value);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [value, delay]);
-
-  return debouncedValue;
-}
+import { useDebounce } from "@/hooks/useDebounce";
 
 interface SearchBarProps {
   onSearch: (results: Product[], empty: boolean) => void;
