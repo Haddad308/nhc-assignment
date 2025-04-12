@@ -4,11 +4,7 @@ import { Suspense } from "react";
 import { ProductSkeleton } from "@/components/home/ProductSkeleton";
 import { Star } from "lucide-react";
 
-export default async function ProductPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default function ProductPage({ params }: { params: { id: string } }) {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="flex-grow container mx-auto px-4 pb-12">
@@ -32,7 +28,7 @@ async function ProductContent({ id }: { id: string }) {
   return (
     <>
       <div className="px-16">
-        <h1 className="text-2xl text-[#285F9D]  mb-8">{product.title}</h1>
+        <h1 className="text-2xl text-[#285F9D] mb-8">{product.title}</h1>
 
         <div className="relative h-64 bg-black mb-8 rounded-2xl">
           <Image
