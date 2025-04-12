@@ -5,7 +5,7 @@ This repository contains a simple product details page built with modern web tec
 ## 🚀 Live Demo
 
 👉 **Check it out here:**  
-🔗 [https://nhc-assignment-five.vercel.app/products/78](https://nhc-assignment-five.vercel.app/products/78)
+🔗 [https://nhc-assignment-five.vercel.app/products/78](https://nhc-assignment-five.vercel.app)
 
 ## 📦 Features
 
