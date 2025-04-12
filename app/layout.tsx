@@ -4,6 +4,7 @@ import { Abel } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import NetworkStatus from "@/components/NetworkStatus";
 
 const abel = Abel({
   weight: "400",
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning className={abel.className}>
+        <NetworkStatus />
         <Header />
         {children}
         <Footer />
