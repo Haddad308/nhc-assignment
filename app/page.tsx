@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import SearchBar from "@/components/search-bar";
-import ProductCard from "@/components/product-card";
-import EmptyState from "@/components/empty-state";
+import SearchBar from "@/components/home/search-bar";
+import ProductCard from "@/components/home/product-card";
+import EmptyState from "@/components/home/empty-state";
 import type { Product } from "@/lib/types";
 
 export default function Home() {

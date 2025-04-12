@@ -2,9 +2,9 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Abel } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import NetworkStatus from "@/components/NetworkStatus";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
+import NetworkStatus from "@/components/system/NetworkStatus";
 
 const abel = Abel({
   weight: "400",
