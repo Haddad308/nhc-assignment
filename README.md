@@ -1,4 +1,4 @@
-# 🛍️ Product Details Page – Assignment Five
+# 🛍️ NHC Assignment
 
 This repository contains a simple product details page built with modern web technologies. The focus of this assignment is to display detailed information about a specific product using a dynamic route.
 
