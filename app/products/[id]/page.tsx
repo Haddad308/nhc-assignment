@@ -5,12 +5,13 @@ import { ProductSkeleton } from "@/components/home/ProductSkeleton";
 import { Star } from "lucide-react";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function ProductPage({ params }: PageProps) {
+export default async function ProductPage({ params }: PageProps) {
+  const { id } = await params;
   return (
     <div className="min-h-screen flex flex-col">
       <div className="flex-grow container mx-auto px-4 pb-12">
@@ -18,7 +19,7 @@ export default function ProductPage({ params }: PageProps) {
           <div className="py-8 px-4">
             <div className="max-w-4xl mx-auto">
               <Suspense fallback={<ProductSkeleton />}>
-                <ProductContent id={params.id} />
+                <ProductContent id={id} />
               </Suspense>
             </div>
           </div>
