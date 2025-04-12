@@ -6,7 +6,6 @@ import { Star } from "lucide-react";
 
 interface ProductPageProps {
   params: { id: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
@@ -17,7 +16,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <div className="py-8 px-4">
             <div className="max-w-4xl mx-auto">
               <Suspense fallback={<ProductSkeleton />}>
-                <ProductContent params={params} />
+                <ProductContent id={params.id} />
               </Suspense>
             </div>
           </div>
@@ -27,8 +26,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
   );
 }
 
-async function ProductContent({ params }: ProductPageProps) {
-  const product = await getProduct(params.id);
+async function ProductContent({ id }: { id: string }) {
+  const product = await getProduct(id);
 
   return (
     <>
