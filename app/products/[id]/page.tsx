@@ -76,50 +76,52 @@ async function ProductContent({ params }: ProductPageProps) {
 
   return (
     <>
-      <h1 className="text-2xl text-blue-600 text-center mb-8">
-        {product.title}
-      </h1>
+      <div className="px-10">
+        <h1 className="text-2xl text-[#285F9D]  mb-8">{product.title}</h1>
 
-      <div className="relative h-64 bg-black mb-8">
-        <Image
-          src={product.thumbnail || "/placeholder.svg"}
-          alt={product.title}
-          fill
-          style={{ objectFit: "contain" }}
-        />
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-8 mb-8">
-        <div>
-          <div className="mb-4">
-            <span>Price : </span>
-            <span className="text-blue-600">${product.price}</span>
-          </div>
-          <div className="mb-4">
-            <span>Rating : </span>
-            <span className="text-yellow-500">
-              {"★".repeat(Math.floor(product.rating))}
-              {"☆".repeat(5 - Math.floor(product.rating))}
-            </span>
-          </div>
-          <div className="mb-4">
-            <span>Brand : </span>
-            <span className="text-blue-600">{product.brand}</span>
-          </div>
+        <div className="relative h-64 bg-black mb-8">
+          <Image
+            src={product.thumbnail || "/placeholder.svg"}
+            alt={product.title}
+            fill
+            style={{ objectFit: "contain" }}
+          />
         </div>
 
-        <div>
-          <div className="mb-4">
-            <span>Discount Percentage :</span>
-            <span className="text-green-600">{product.discountPercentage}</span>
+        <div className="grid md:grid-cols-2 gap-8 mb-8 ">
+          <div>
+            <div className="mb-4">
+              <span>Price : </span>
+              <span className="text-[#285F9D]">${product.price}</span>
+            </div>
+            <div className="mb-4">
+              <span>Rating : </span>
+              <span className="text-yellow-500">
+                {"★".repeat(Math.floor(product.rating))}
+                {"☆".repeat(5 - Math.floor(product.rating))}
+              </span>
+            </div>
+            <div className="mb-4">
+              <span>Brand : </span>
+              <span className="text-[#285F9D]">{product.brand}</span>
+            </div>
           </div>
-          <div className="mb-4">
-            <span>Stock :</span>
-            <span className="text-red-600">{product.stock}</span>
-          </div>
-          <div className="mb-4">
-            <span>Category :</span>
-            <span className="text-blue-600">{product.category}</span>
+
+          <div>
+            <div className="mb-4">
+              <span>Discount Percentage :</span>
+              <span className="text-green-600">
+                {product.discountPercentage}
+              </span>
+            </div>
+            <div className="mb-4">
+              <span>Stock :</span>
+              <span className="text-red-600">{product.stock}</span>
+            </div>
+            <div className="mb-4">
+              <span>Category :</span>
+              <span className="text-[#285F9D]">{product.category}</span>
+            </div>
           </div>
         </div>
       </div>
