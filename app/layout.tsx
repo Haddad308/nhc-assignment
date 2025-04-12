@@ -12,7 +12,7 @@ const abel = Abel({
 });
 
 export const metadata: Metadata = {
-  title: "Products Search",
+  title: "NHC Products",
   description: "Search products using dummyjson.com API",
 };
 
@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning className={abel.className}>
+        <link rel="icon" href="/NHC.svg" sizes="any" />
         <NetworkStatus />
         <Header />
         {children}

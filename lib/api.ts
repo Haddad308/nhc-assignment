@@ -1,6 +1,6 @@
 import { Product, ProductsResponse } from "@/lib/types";
 
-const BASE_URL = "https://dummyjson.com";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export async function searchProducts(query: string): Promise<ProductsResponse> {
   const response = await fetch(
